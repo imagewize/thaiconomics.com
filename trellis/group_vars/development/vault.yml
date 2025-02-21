@@ -1,0 +1,17 @@
+# Created by trellis-cli v1.13.0
+# Documentation: https://roots.io/trellis/docs/vault/
+
+vault_mysql_root_password: OogODgbZRgWq6zflgb1HBaGLs4jkfCuxI0WR8GtLh2rNnR3d4CahZpVuq9hyr0G4
+vault_wordpress_sites:
+  thaiconomics.com:
+    admin_password: RbJdAOIKSWPYVBbh2jgvSAARNKO0hc3jrqJLCychBUwxfpwJIv7YM5qFvsTgAyjU
+    env:
+      db_password: SZvffyFHEWMgNfhfhRgreOprzAovMyfZXKgpfm4YI379hm3hnXgJclWB2HPRHPkx
+      auth_key: Y4kTgfe4HYjIjdAr1PgRZT1bymJffbc0Lh7egLozOenE2pKVYQXHoWRFA800it0d
+      secure_auth_key: LJIpDLE8kKVAfvU99uLFhPJYKH27puI7eqF6EHZdDf9VdRk3I3DLTBD0Q7sRQ0gi
+      logged_in_key: KHDGSPMga1Xd4hwVgZQ84ZnD5qZGvQExoj3pfc4NpHccVSSwdBTHY8SKvD30mvnP
+      nonce_key: iLddqZ3NEzREWDp1Igc3liyaqfafstuiMAjXvuX7cWIJptkqzvh523IX1cTBhTrx
+      auth_salt: DtomqEc4cXXNpqdWBlMVdSg2hgQnLVNyvXjmZOwadGbWclVWVrNL5fWZQTwkSv0g
+      secure_auth_salt: U9vgscHe5hJ1XEuww2LDkwZ6K9SQwqTp3U4haD3uwn4TDLYXHgM7xfN6tGuwZMsD
+      logged_in_salt: IMX2LmiwFBILU1Z3IOhgdTSt7egoExXfelCKVbv1w5N1lHTK5Irxv5K6IZDawe1Y
+      nonce_salt: Ezd624jp6p3Z4DvfH6UEILaezzVCJT7f2BLLfAl0scCLG4yRtAIfbYtBEhgxDVsh

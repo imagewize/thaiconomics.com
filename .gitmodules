@@ -1,0 +1,3 @@
+[submodule "site/web/app/themes/moiraine"]
+	path = site/web/app/themes/moiraine
+	url = git@github.com:imagewize/moiraine.git

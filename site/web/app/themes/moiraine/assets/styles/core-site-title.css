@@ -1,0 +1,15 @@
+.wp-block-site-title.has-bottom-border {
+	position: relative;
+	padding-bottom: 20px; /* Adjust as needed */
+}
+
+.wp-block-site-title.has-bottom-border::after {
+	content: "";
+	background: #000; /* Or var(--wp--preset--color--main) if you have it defined */
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 2px;
+	width: 50%;
+}

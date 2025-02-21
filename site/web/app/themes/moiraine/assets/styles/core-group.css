@@ -1,0 +1,36 @@
+/* Group
+--------------------------------------------- */
+
+.is-style-background-blur {
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+
+/* Improvements for row group */
+@media (max-width: 781px) {
+	.moiraine-row-stack {
+		flex-direction: column;
+		align-items: flex-start !important;
+	}
+
+	.moiraine-row-stack > * {
+		flex-basis: 100% !important;
+	}
+
+	.moiraine-flex-start {
+		align-items: flex-start !important;
+	}
+
+	.moiraine-justify-start {
+		justify-content: flex-start !important;
+	}
+}
+
+.moiraine-row-stack > .wp-block-buttons,
+.moiraine-no-shrink {
+	flex-shrink: 0;
+}
+
+.wp-block-group.moiraine-sticky-top {
+	top: calc(20px + var(--wp-admin--admin-bar--position-offset, 0px))
+}
