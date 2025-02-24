@@ -20,9 +20,30 @@ function setup() {
 
 	// Remove core block patterns.
 	remove_theme_support( 'core-block-patterns' );
+
+	// Add custom image size for index page.
+	add_image_size('featured-vertical', 350, 525, true);
+	
+	// Add the size to WordPress size dropdown
+	add_filter('image_size_names_choose', function($sizes) {
+		return array_merge($sizes, [
+			'featured-vertical' => __('Featured Vertical', 'moiraine')
+		]);
+	});
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
 
+// Add this new function after setup()
+function add_image_size_to_blocks() {
+    add_filter('block_editor_settings_all', function($settings) {
+        $settings['imageSizes'][] = [
+            'slug' => 'featured-vertical',
+            'name' => __('Featured Vertical', 'moiraine')
+        ];
+        return $settings;
+    });
+}
+add_action('init', __NAMESPACE__ . '\add_image_size_to_blocks');
 
 /**
  * Enqueue styles.
