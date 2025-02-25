@@ -27,16 +27,11 @@
                 <div class="wp-block-column" style="flex-basis:60%">
                     <!-- wp:group {"style":{"spacing":{"blockGap":"5px","margin":{"bottom":"1.5rem"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
                     <div class="wp-block-group" style="margin-bottom:1.5rem">
-                        <!-- wp:post-author {"showAvatar":false} /-->
-                        <!-- wp:paragraph {"fontSize":"small"} -->
-                        <p class="has-small-font-size">·</p>
-                        <!-- /wp:paragraph -->
-                        <!-- wp:post-date /-->
+                        <!-- wp:post-date {"fontFamily":"bodoni"} /-->
                     </div>
                     <!-- /wp:group -->
-                    <!-- wp:post-title {"isLink":true,"fontSize":"x-large"} /-->
-                    <!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"fontSize":"medium"} /-->
-                    <!-- wp:post-terms {"term":"category","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"small"} /-->
+                    <!-- wp:post-title {"isLink":true,"fontSize":"x-large","fontFamily":"bodoni"} /-->
+                    <!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"fontSize":"medium","fontFamily":"open-sans"} /-->
                 </div>
                 <!-- /wp:column -->
             </div>

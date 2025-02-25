@@ -319,24 +319,9 @@
 			"writingMode": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Mona Sans, sans-serif",
-					"name": "Mona Sans",
-					"slug": "primary",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans",
-							"fontStretch": "75% 125%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [ "file:./assets/fonts/Mona-Sans.woff2"]
-						}
-					]
-				},
-				{
 					"fontFamily": "Open Sans, sans-serif",
 					"name": "Open Sans",
-					"slug": "open-sans",
+					"slug": "primary",
 					"fontFace": [
 						{
 							"fontFamily": "Open Sans",
@@ -359,53 +344,30 @@
 					]
 				},
 				{
-					"fontFamily": "Mona Sans Expanded, sans-serif",
-					"name": "Mona Sans Expanded",
-					"slug": "expanded",
+					"fontFamily": "Bodoni Moda, serif",
+					"name": "Bodoni Moda",
+					"slug": "bodoni",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Expanded",
-							"fontStretch": "125%",
+							"fontFamily": "Bodoni Moda",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/Mona-Sans.woff2"
-							]
+							"fontWeight": "400 900",
+							"src": [ "file:./assets/fonts/Bodoni-Moda.woff2"]
 						}
 					]
 				},
 				{
-					"fontFamily": "Mona Sans Condensed, sans-serif",
-					"name": "Mona Sans Condensed",
-					"slug": "condensed",
+					"fontFamily": "Bodoni Moda Italic, serif",
+					"name": "Bodoni Moda Italic",
+					"slug": "bodoni-italic",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Condensed",
-							"fontStretch": "94%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/Mona-Sans.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "Mona Sans Narrow, sans-serif",
-					"name": "Mona Sans Narrow",
-					"slug": "narrow",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Narrow",
-							"fontStretch": "75%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/Mona-Sans.woff2"
-							]
+							"fontFamily": "Bodoni Moda Italic",
+							"fontStyle": "italic",
+							"fontWeight": "400 900",
+							"src": [ "file:./assets/fonts/Bodoni-Moda-Italic.woff2"]
 						}
 					]
 				},
