@@ -215,3 +215,9 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+
+/**
+ * Include block extensions.
+ */
+require get_template_directory() . '/inc/block-extensions.php';
