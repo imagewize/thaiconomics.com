@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Post Loop Grid Thaiconomics
- * Slug: moiraine/post-loop-grid-thc
+ * Slug: moiraine/post-loop-grid-tc
  * Description: This post loop grid is best used on index and archive pages where the loop can inherit the query from the page.
  * Categories: moiraine/posts
  * Keywords: blog, posts, query, loop
@@ -26,7 +26,7 @@
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","padding":{"right":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
             <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
-                <!-- wp:post-title {"isLink":true,"fontSize":"medium","fontFamily":"bodoni"} /-->
+                <!-- wp:post-title {"isLink":true,"className":"is-style-post-title-no-underline","fontSize":"medium","fontFamily":"bodoni"} /-->
             </div>
             <!-- /wp:group -->
         </div>
