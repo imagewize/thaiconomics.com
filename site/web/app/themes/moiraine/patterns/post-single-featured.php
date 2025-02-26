@@ -30,7 +30,7 @@
                 <!-- /wp:column -->
                 <!-- wp:column {"width":"60%","style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
                 <div class="wp-block-column" style="flex-basis:60%">
-                    <!-- wp:post-excerpt {"moreText":"read more ..","showMoreOnNewLine":true,"fontSize":"large","fontFamily":"open-sans"} /-->
+                    <!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":true,"fontSize":"large","fontFamily":"open-sans"} /-->
                 </div>
                 <!-- /wp:column -->
             </div>
