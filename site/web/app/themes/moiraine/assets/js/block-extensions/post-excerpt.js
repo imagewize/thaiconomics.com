@@ -79,31 +79,31 @@
         };
     }, 'withInspectorControls');
 
-    // Modify the save function to conditionally wrap the excerpt in a link
-    const modifySaveElement = function(element, blockType, attributes) {
-        if (blockType.name !== 'core/post-excerpt') {
-            return element;
-        }
+    // Add custom class name to the block
+    const withCustomClassName = createHigherOrderComponent((BlockListBlock) => {
+        return (props) => {
+            if (props.name !== 'core/post-excerpt') {
+                return createElement(BlockListBlock, props);
+            }
 
-        if (!attributes.linkToPost) {
-            return element;
-        }
+            const { attributes } = props;
+            const { linkToPost, underlineLink } = attributes;
 
-        // We're in the editor, so we need to add a class to simulate the link
-        // The actual linking happens on the PHP side
-        const className = 'moiraine-linked-excerpt' + (attributes.underlineLink ? ' has-underline' : ' no-underline');
-        
-        // Add our custom class to the existing element
-        if (element && element.props && element.props.className) {
-            return wp.element.cloneElement(element, {
-                className: element.props.className + ' ' + className
+            // Only add custom class if linkToPost is true
+            if (!linkToPost) {
+                return createElement(BlockListBlock, props);
+            }
+
+            // Create the class name based on attributes
+            const className = 'moiraine-linked-excerpt' + (underlineLink ? ' has-underline' : ' no-underline');
+
+            // Add custom class
+            return createElement(BlockListBlock, {
+                ...props,
+                className: props.className ? props.className + ' ' + className : className
             });
-        } else {
-            return wp.element.cloneElement(element, {
-                className: className
-            });
-        }
-    };
+        };
+    }, 'withCustomClassName');
 
     // Register our filters
     addFilter(
@@ -119,8 +119,8 @@
     );
 
     addFilter(
-        'blocks.getSaveElement', 
-        'moiraine/post-excerpt-link-output',
-        modifySaveElement
+        'editor.BlockListBlock',
+        'moiraine/post-excerpt-link-class',
+        withCustomClassName
     );
 })(window.wp);

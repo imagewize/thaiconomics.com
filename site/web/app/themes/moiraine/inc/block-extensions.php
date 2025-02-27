@@ -35,6 +35,15 @@ function moiraine_enqueue_block_extensions() {
         $asset_version,
         true
     );
+
+    // Register custom attributes with server-side registration
+    wp_add_inline_script('moiraine-post-excerpt-extension', 
+        'wp.domReady(function() {
+            wp.blocks.registerBlockAttribute("core/post-excerpt", "linkToPost", { type: "boolean" });
+            wp.blocks.registerBlockAttribute("core/post-excerpt", "underlineLink", { type: "boolean" });
+        });',
+        'after'
+    );
 }
 add_action('enqueue_block_editor_assets', 'moiraine_enqueue_block_extensions');
 
@@ -64,16 +73,14 @@ function moiraine_filter_post_excerpt_block_output($block_content, $block) {
     $has_underline = isset($attributes['underlineLink']) && $attributes['underlineLink'];
     $underline_class = $has_underline ? '' : ' no-underline-link';
     
-    // Find the excerpt text and wrap it in a link
-    // This is a simplified approach - you might need to adjust based on your block structure
-    $excerpt_content = preg_replace(
-        '/<p class="(.*?)">(.*?)<\/p>/',
-        '<p class="$1"><a href="' . esc_url($post_url) . '" class="excerpt-link' . esc_attr($underline_class) . '">$2</a></p>',
-        $block_content,
-        1
-    );
+    // Find the excerpt text within p tags and wrap it in a link
+    if (preg_match('/<p.*?>(.*?)<\/p>/s', $block_content, $matches)) {
+        $paragraph_content = $matches[1];
+        $new_paragraph_content = '<a href="' . esc_url($post_url) . '" class="excerpt-link' . esc_attr($underline_class) . '">' . $paragraph_content . '</a>';
+        $block_content = str_replace($paragraph_content, $new_paragraph_content, $block_content);
+    }
     
-    return $excerpt_content ?: $block_content;
+    return $block_content;
 }
 add_filter('render_block', 'moiraine_filter_post_excerpt_block_output', 10, 2);
 
