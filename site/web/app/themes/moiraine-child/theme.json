@@ -137,6 +137,13 @@
 			]
 		}
 	],
+	"templateParts": [
+		{
+			"name": "post-sidebar",
+			"title": "Post Sidebar",
+			"area": "sidebar"
+		}
+	],
 	"version": 3,
 	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }
