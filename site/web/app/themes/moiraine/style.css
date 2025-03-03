@@ -170,9 +170,3 @@ a.more-link {
 		position: static;
 	}
 }
-
-.featured-post-query .wp-block-post-featured-image img {
-    max-width: 350px !important;
-    height: 525px !important;
-    object-fit: cover;
-}
