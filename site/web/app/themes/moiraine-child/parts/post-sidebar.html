@@ -1,0 +1,40 @@
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+    <!-- wp:heading {"level":3} -->
+    <h3 class="wp-block-heading">About</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph -->
+    <p>Welcome to Thaiconomics, where we explore the fascinating economic landscape of Thailand.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:heading {"level":3} -->
+    <h3 class="wp-block-heading">Categories</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:categories {"className":"is-style-list-chevron"} /-->
+
+    <!-- wp:heading {"level":3} -->
+    <h3 class="wp-block-heading">Recent Posts</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:query {"queryId":2,"query":{"perPage":"3","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"list","columns":2}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template -->
+        <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"bottom":"var:preset|spacing|medium"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--medium)">
+            <!-- wp:post-title {"isLink":true,"fontSize":"small"} /-->
+            <!-- wp:post-date {"fontSize":"x-small","textColor":"secondary"} /-->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+    </div>
+    <!-- /wp:query -->
+
+    <!-- wp:heading {"level":3} -->
+    <h3 class="wp-block-heading">Tags</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:tag-cloud {"className":"is-style-default"} /-->
+</div>
+<!-- /wp:group -->
