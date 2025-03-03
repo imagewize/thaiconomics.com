@@ -127,6 +127,16 @@
 			"lineHeight": true
 		}
 	},
+	"styles": {},
+	"customTemplates": [
+		{
+			"name": "single-with-sidebar",
+			"title": "Single Posts with Sidebar",
+			"postTypes": [
+				"post"
+			]
+		}
+	],
 	"version": 3,
 	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }
