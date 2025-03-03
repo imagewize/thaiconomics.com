@@ -131,7 +131,7 @@
 	"customTemplates": [
 		{
 			"name": "single-with-sidebar",
-			"title": "Single Posts with Sidebar",
+			"title": "Single Post with Sidebar",
 			"postTypes": [
 				"post"
 			]
